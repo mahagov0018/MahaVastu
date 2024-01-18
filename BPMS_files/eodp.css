@@ -1,0 +1,75 @@
+
+.gr-table{
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	border: 1px solid #000
+}
+.gr-table a{
+	color: #00446d;
+}
+
+.gr-table a:hover{
+	transition: 500ms;
+	font-size: 16px;
+	color: #387511;
+}
+
+
+.gr-table th{
+	padding: 5px;
+	color: #fff;
+	background-color: rgba(0, 68, 109, 0.72);
+	text-align: center;
+}
+.gr-table td{
+	padding: 15px;
+}
+.gr-table-section{
+	/*background:url(../images/table-4.png)no-repeat ;*/
+	 /*background-size: cover;*/
+	background-color: #fff;
+	padding: 15px;
+}
+
+.faq-ul{
+	padding: 15px;
+}
+.faq-ul li{
+	padding: 15px;
+}
+.faq-ul .qsn{
+	cursor: pointer;
+	background-color: antiquewhite;
+    font-size: 15px;
+    color: #00446d;
+    font-weight: 700;
+    padding: 5px;
+}
+.faq-ul .ans{
+	/*display: none;*/
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.faq-ul h2{
+	padding: 10px;
+	background-color: #00446d;
+	padding-left: 10px;
+	color: #fff;
+}
+.img-section img{
+	border: 1px solid black;
+	margin: 10px;
+	width: 800px;
+}
+.img-section-small img{
+	border: 1px solid black;
+	margin: 10px;
+}
+.head-section{
+	color: #00446d;
+	padding-top: 25px;
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+}

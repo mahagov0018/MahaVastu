@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0188)https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA== -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>BPMS</title>
+  <!-- page specific plugin styles -->
+  <!-- text fonts -->
+
+  <script src="./BPMS_files/jquery.min.js.download"></script>
+  <script src="./BPMS_files/lightbox.js.download"></script>
+  <!-- <link rel="stylesheet" href="fonts/fonts.googleapis.com.css" /> -->
+  <link rel="stylesheet" href="./BPMS_files/fonts.css">
+  <!-- ace styles -->
+  <link rel="stylesheet" href="./BPMS_files/ace.css" class="ace-main-stylesheet" id="main-ace-style">
+  <!-- Bootstrap -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+  <link href="./BPMS_files/bootstrap.css" rel="stylesheet">
+  <!-- Custom stylesheet -->
+  <link href="./BPMS_files/style.css" rel="stylesheet">
+  <link href="./BPMS_files/eodp.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <!--<link href="./css/font-awesome.min.css" rel="stylesheet"/>-->
+  <link href="./BPMS_files/font-awesome.min.css" rel="stylesheet">
+  <script src="./BPMS_files/sweetalert.min.js.download"></script>
+  <link rel="stylesheet" type="text/css" href="./BPMS_files/sweetalert.css">
+  <!-- Sweet Alert -->
+
+  <link rel="stylesheet" type="text/css" href="./BPMS_files/custom.css">
+
+  <!-- ------- -->
+  <link rel="shortcut icon" href="https://mahavastu.maharashtra.gov.in/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://mahavastu.maharashtra.gov.in/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./BPMS_files/lightbox.css">
+  <link rel="stylesheet" href="./BPMS_files/dataTables.bootstrap.min.css">
+
+  <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.jqueryui.min.css">-->
+  <script src="./BPMS_files/jquery.dataTables.min.js.download"></script>
+  <script src="./BPMS_files/dataTables.bootstrap.min.js.download"></script>
+  <script src="./BPMS_files/jquery.validate.min.js.download"></script>
+
+  <script src="./BPMS_files/slick-slider.js.download"></script>
+
+  <!-- chosen -->
+  <link rel="stylesheet" href="./BPMS_files/chosen.min.css">
+  <script src="./BPMS_files/chosen.jquery.min.js.download"></script>
+  <script src="./BPMS_files/init.js.download"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      jQuery(".chosen_select").chosen({
+        search_contains: true,
+        width: '100%'
+      });
+    });
+
+    function view_details(data) {
+      //alert("view"+data);
+      window.open("file_viewers.php?para=" + data, "window", "width=800,height=500,top=100,left=300 addressbar=no, scrollbars=yes, toolbar=no, menubar=no, resizable=no");
+    }
+  </script>
+  <script src="./BPMS_files/jquery.confirm.js.download"></script>
+  <style>
+    .report-error {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      top: 20%;
+      transform: translateY(-50%);
+    }
+
+    .report-error h4 {
+      color: #ff0202;
+    }
+
+    .starrs {
+      color: red;
+    }
+
+    .clnote {
+      font-weight: 600;
+    }
+
+    #registration_form label.error {
+      color: #FB3A3A;
+      font-weight: normal !important;
+    }
+
+    /* enable absolute positioning */
+    .inner-addon {
+      position: relative;
+    }
+
+    /* style icon */
+    .inner-addon .glyphicon {
+      position: absolute;
+      padding: 10px;
+      pointer-events: none;
+    }
+
+    /* align icon */
+    .left-addon .glyphicon {
+      left: 0px;
+    }
+
+    .right-addon .glyphicon {
+      right: 0px;
+    }
+
+    /* add padding  */
+    .left-addon input {
+      padding-left: 30px;
+    }
+
+    .right-addon input {
+      padding-right: 30px;
+    }
+
+    .thum {
+      max-width: 100px;
+      min-width: 100px;
+      min-height: 100px;
+      max-height: 100px;
+      padding: 5px;
+    }
+
+    .example-image {
+      padding: 5px;
+    }
+
+    .panel-heading {
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0 px !important;
+      border-top-right-radius: 0px !important;
+      padding: 10px 20px;
+    }
+
+    .panel-primary {
+      border-color: #e3e3e3 !important;
+    }
+
+    .ui-autocomplete {
+      max-height: 350px;
+      overflow-y: auto;
+      /* prevent horizontal scrollbar */
+      overflow-x: hidden;
+      /* add padding to account for vertical scrollbar */
+      z-index: 1000 !important;
+    }
+
+
+    .logo-cont {
+      border-bottom: 2px solid #25a3d7;
+      padding-bottom: 10px;
+    }
+
+    .carousel-cont {
+      padding: 1px 0 0;
+    }
+
+    .carousel-control.left {
+      background-color: #2395c0;
+      left: -16px;
+      right: auto;
+    }
+
+    .carousel-control.right {
+      background-color: #2395c0;
+      background-repeat: repeat-x;
+      left: auto;
+      right: -11px;
+    }
+
+    ul.style-1 li {
+      background: url(BPMS_files/bullet-1.png) no-repeat 0 5px;
+      padding: 0 0 15px 16px;
+    }
+
+    .heading-style {
+      background-color: #28869e !important;
+      border-color: #28869e;
+      color: #fff !important;
+    }
+
+    .more-less {
+      float: right;
+      color: #FFFFFF;
+      font-weight: 900 !important;
+
+    }
+
+    .chosen-container.chosen-container-single {
+      width: 100% !important;
+      /* or any value that fits your needs */
+    }
+
+    /* Ruchita16thAug2021 */
+    .custom-text-wrap {
+      word-wrap: break-word;
+    }
+
+    /* Ruchita16thAug2021 */
+  </style>
+
+  <style>
+    ul.style-1 li {
+      background: url(BPMS_files/bullet-1.png) no-repeat 0 5px;
+      padding: 0 0 15px 16px;
+    }
+  </style>
+  <script>
+    //     $(document).ready(function(){
+    //    $( document ).on( 'focus', ':input', function(){
+    //        $( this ).attr( 'autocomplete', 'off' );
+    //    });
+    //});
+  </script>
+  <script>
+    var dtCh = "/";
+    var minYear = 1900;
+    var maxYear = 2100;
+    function isInteger(s) {
+      var i;
+      for (i = 0; i < s.length; i++) {
+        var c = s.charAt(i);
+        if (((c < "0") || (c > "9"))) return false;
+      }
+      return true;
+    }
+
+    function stripCharsInBag(s, bag) {
+      var i;
+      var returnString = "";
+      for (i = 0; i < s.length; i++) {
+        var c = s.charAt(i);
+        if (bag.indexOf(c) == -1) returnString += c;
+      }
+      return returnString;
+    }
+
+    function daysInFebruary(year) {
+      return (((year % 4 == 0) && ((!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28);
+    }
+    function DaysArray(n) {
+      for (var i = 1; i <= n; i++) {
+        this[i] = 31
+        if (i == 4 || i == 6 || i == 9 || i == 11) { this[i] = 30 }
+        if (i == 2) { this[i] = 29 }
+      }
+      return this;
+    }
+    function isDate(dtStr) {
+      dtCh = "/";
+      var daysInMonth = DaysArray(12);
+      var pos1 = dtStr.indexOf(dtCh);
+      var pos2 = dtStr.indexOf(dtCh, pos1 + 1);
+      var strDay = dtStr.substring(0, pos1);
+      var strMonth = dtStr.substring(pos1 + 1, pos2);
+      var strYear = dtStr.substring(pos2 + 1);
+      strYr = strYear;
+      if (strDay.charAt(0) == "0" && strDay.length > 1) {
+        strDay = strDay.substring(1);
+      }
+      if (strMonth.charAt(0) == "0" && strMonth.length > 1) {
+        strMonth = strMonth.substring(1);
+      }
+      for (var i = 1; i <= 3; i++) {
+        if (strYr.charAt(0) == "0" && strYr.length > 1) strYr = strYr.substring(1);
+      }
+      month = parseInt(strMonth);
+      day = parseInt(strDay);
+      year = parseInt(strYr);
+
+      if (pos1 == -1 || pos2 == -1) {
+        alert("The date format should be : dd/mm/yyyy");
+        return false;
+      }
+      if (strMonth.length < 1 || month < 1 || month > 12) {
+        alert("Please enter a valid month");
+        return false;
+      }
+      if (strDay.length < 1 || day < 1 || day > 31 || (month == 2 && day > daysInFebruary(year)) || day > daysInMonth[month]) {
+        alert("Please enter a valid day");
+        return false;
+      }
+      if (strYear.length != 4 || year == 0 || year < minYear || year > maxYear) {
+        alert("Please enter a valid 4 digit year between " + minYear + " and " + maxYear);
+        return false;
+      }
+      if (dtStr.indexOf(dtCh, pos2 + 1) != -1 || isInteger(stripCharsInBag(dtStr, dtCh)) == false) {
+        alert("Please enter a valid date");
+        return false;
+      }
+      return true;
+    }
+
+    function encodedata(para)	//add for stqc 021112
+    {
+      var url = "getdata.php";
+      var upara = new Array();
+      upara[0] = "rttype=LDATA";
+      upara[1] = "para=" + para;
+      var xmldoc2 = "";
+      xmldoc2 = openurl1(http, url, upara, "post", "getval");
+    }	
+  </script>
+  <script>
+    function isnumeric(inval, decvl) {
+      var cnt;
+      var dotcnt;
+      dotcnt = 0;
+      for (cnt = 0; cnt < inval.length; cnt++) {
+        var c = inval.charAt(cnt);
+        if (c == ".") {
+          if (decvl != "Y") {
+            alert(". Not Allowed In Entered Text");
+            return false;
+          }
+          dotcnt = dotcnt + 1;
+          if (dotcnt > 1) {
+            alert("Invalid Numeric Format");
+            return false;
+          }
+        }
+        else {
+          if (((c < "0") || (c > "9"))) {
+            alert("Invalid Numeric Format");
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+
+    function isnumeric1(inval, decvl) {
+      var cnt;
+      var dotcnt;
+      dotcnt = 0;
+      for (cnt = 0; cnt < inval.length; cnt++) {
+        var c = inval.charAt(cnt);
+        if (c == "-") {
+          if (cnt != 0) {
+            alert("a Invalid Numeric Format");
+            return false;
+          }
+        }
+        else {
+          if (c == ".") {
+            if (decvl != "Y") {
+              alert(". Not Allowed In Entered Text");
+              return false;
+            }
+            dotcnt = dotcnt + 1;
+            if (dotcnt > 1) {
+              alert("Invalid Numeric Format");
+              return false;
+            }
+          }
+          else {
+            if (((c < "0") || (c > "9"))) {
+              alert("Invalid Numeric Format");
+              return false;
+            }
+          }
+        }
+      }
+      return true;
+    }
+
+
+    function isnull(inputval) {
+      newval = inputval.value;
+      if (newval != "") {
+        return true;
+      }
+      return false;
+    }
+    function setfocus(docnm) {
+      docnm;
+    }
+  </script>
+  <script>
+    function dtchk(fdate, tdate) {
+      var dtch = "/";
+      var pos1 = fdate.indexOf(dtCh);
+      var pos2 = fdate.indexOf(dtCh, pos1 + 1);
+      var strday = fdate.substring(0, pos1);
+      var strmonth = fdate.substring(pos1 + 1, pos2);
+      var stryear = fdate.substring(pos2 + 1);
+      var pos1 = tdate.indexOf(dtCh);
+      var pos2 = tdate.indexOf(dtCh, pos1 + 1);
+      var strday1 = tdate.substring(0, pos1);
+      var strmonth1 = tdate.substring(pos1 + 1, pos2);
+      var stryear1 = tdate.substring(pos2 + 1);
+      if (strday > strday1 && strmonth > strmonth1 && stryear > stryear1) {
+        return false;
+      }
+      if (strday > strday1 && strmonth == strmonth1 && stryear == stryear1) {
+        return false;
+      }
+      if (strmonth > strmonth1 && stryear == stryear1) {
+        return false;
+      }
+      if (stryear > stryear1) {
+        return false;
+      }
+      return true;
+    }
+    function setcolor(currobj, bgclr, forclr) {
+      currobj.style.background = bgclr;
+      currobj.style.color = forclr;
+    }
+    function relcolor(currobj, bgclr, forclr) {
+      currobj.style.background = bgclr;
+      currobj.style.color = forclr;
+    }
+    function showwait(event) {
+      var objnm = document.getElementById("pageIsLoading");
+      objnm.style.display = "block";
+      xMousePos = window.event.clientX + document.body.scrollLeft;
+      yMousePos = window.event.clientY + document.body.scrollTop;
+      objnm.style.top = yMousePos - 100;
+      objnm.style.left = xMousePos - 100;
+
+    }
+    function Sign(objusr, objsign, objdgsign) {
+
+      // update the data to be signed
+      // it can also be done for data using
+      // TCSSigner1.updateData("Data to be updated")				  
+      if (objdgsign.value != "Y") {
+        return true;
+      }
+      data = objusr.value;
+      var signature = "";
+      if (TCSSigner1.updateData(data)) {
+        //alert("Data updated Successfully...");
+
+        //If the data is successfully updated, select the certificate from UI.
+        if (TCSSigner1.selectSigningCertFromUI()) {
+          // Set the output Signature Format 1 for Base64, 2 for Der
+          var bol = TCSSigner1.setSignatureFormat(1);
+          if (bol) { }
+          else {
+            alert(TCSSigner1.getErrorMessage());
+          }
+          // Set the output signature type, either Detached or attached.
+          bol = TCSSigner1.setDetached(0);
+
+          //Set comments, it is an optional field
+          //required for file input output 
+          //bol = TCSSigner1.setComments("Comments");
+
+          if (bol) { }
+          else {
+            alert(TCSSigner1.getErrorMessage());
+          }
+
+          //Set Document Name, it is an optional field
+          //required for input output file
+          //bol = TCSSigner1.setDocumentName("Docname");
+          /*if(bol)
+          {}
+          else
+          {
+            alert(TCSSigner1.getErrorMessage());
+          }*/
+          //Set Signing time, it is an optional field. if not specified it will take present time
+          //Date date=new Date();
+          //bol = TCSSigner1.setSigningTime(date);
+          //if(bol)
+          //{}
+          //else
+          //{
+          //	alert(TCSSigner1.getErrorMessage());
+          //}
+
+          //Set the specified algorithm (DES3 / DES) for Signing.
+          // 1 for SHA1, 2 for MD5
+
+          //bol = TCSSigner1.setHashAlgorithm(1);
+
+          //Set the revocation check level for the certificates
+          // 1 - CRL_NO_CHECK - No revocation status check
+          // 2 - CRL_END_CERT_CHECK - Check end certificate revocation status only
+          // 3 - CRL_CHAIN_CHECK - Check the revocation status of the entire certificate chain
+
+          //bol = TCSSigner1.setRevocationCheck(1);
+          /*if(bol)
+          {}
+          else
+          {
+            alert(TCSSigner1.getErrorMessage());
+          }*/
+          //Set the revocation check mode online or offline.
+          // 1   - Online revocation
+          // 0 - Offline revocation
+          //TCSSigner1.setRevocationCheckOnline(0);
+
+          // retrieving the certificate details such as subject DN(1), issuer DN(2), Serial Number(3), Expiry date(4) of the Selected certificate.
+          //rquired for input output file
+          //var details = TCSSigner1.getSelectedSignerCertDetails(3);
+          //alert("Signer Certificate Serial No : " + details);
+
+          //To Validate the Revocation status of a certificate before signing.
+
+          //bol = TCSSigner1.validateCertBeforeSigning(true);
+
+          // Sign the data or a document
+          signature = TCSSigner1.sign();
+          if ("" != signature) {
+            //alert("Signature Successful...");
+            //alert("Signature : \n" + signature);
+          }
+          else {
+            alert(TCSSigner1.getErrorMessage());
+          }
+
+          // To write the output to a file that is specified by the user
+          // use SignToFile("Filepath") method, this will return a boolean value.
+
+        }
+        else {
+
+          //alert(TCSSigner1.getErrorMessage());
+          alert("Invalid Signature");
+        }
+      }
+      else {
+        alert(TCSSigner1.getErrorMessage());
+      }
+
+      objsign.value = signature;
+
+      if (signature == "") {
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+    function printreport() {
+      window.open("print_report.php?cboexpprint=PNewWintoolbar=no,status=no,resizable=no,scrollbars=no, top=100,left=100,width=100,height=100");
+    }
+
+  </script> <!--    <SCRIPT SRC="http://mahavastu.maharashtra.gov.in/fonts/PFR_EOT.js" TYPE="text/javascript">
+                    </SCRIPT>-->
+  <!-- /n101011 -->
+  <script type="text/JavaScript">
+      <!--
+        function MM_swapImgRestore() { //v3.0
+        var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+        }
+
+        function MM_preloadImages() { //v3.0
+        var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+        var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+        if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+        }
+
+        function MM_findObj(n, d) { //v4.01
+        var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+        if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+        for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+        if(!x && d.getElementById) x=d.getElementById(n); return x;
+        }
+
+        function MM_swapImage() { //v3.0
+        var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+        if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+        }
+        //-->
+    </script>
+  <!-- /n101011 -->
+
+</head>
+
+<body class="" style="padding-right: 15px;">
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-pro">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://mahavastu.maharashtra.gov.in/index.php"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="https://mahavastu.maharashtra.gov.in/index_marathi.php" target="_self" class="dropbtn"><i
+                class="fa fa-language"></i> मराठी </a></li>
+          <!--------Date:21-8-17- Gajanan--------->
+
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+              href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPXVzZXJndWlkZQ=="
+              target="_self"> <i class="fa fa-user"></i>User Guide </a>
+            <ul class="dropdown-menu" style="width:60%;margin-top: -15px;">
+              <li><a
+                  href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPXByc2VudGF0aW9u">Presentations</a>
+              </li>
+              <li><a
+                  href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPXVzZXJndWlkZQ==">Manuals</a>
+              </li>
+              <!-- <li><a  href="index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPXZpZGVvX2Rhc2hib2FyZA==">Video</a></li> -->
+              <li class="dropdown dropdown-submenu"><a
+                  href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA==#"
+                  class="dropdown-toggle" data-toggle="dropdown">FAQs</a>
+                <ul class="dropdown-menu" style="width:150%;">
+                  <li> <a
+                      href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWZhcS10cA==">TP-Client(Drawing)</a>
+                  </li>
+                  <li> <a
+                      href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWZhcS1icG1z">Application(Online)</a>
+                  </li>
+                  <li> <a
+                      href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWZhcS1vcGVyYXRpb24=">Operational
+                      Issue</a> </li>
+                  <li> <a
+                      href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWZhcS1wYXltZW50">Payment
+                      Issue</a> </li>
+                  <li> <a
+                      href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWZhcS1vdGhlcg==">Others
+                      Issue</a> </li>
+                  <li> <a
+                      href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWZhcS1icG1zJnR5cGU9ZG9zX2RvbnQ=">Do's
+                      and Don'ts</a> </li>
+                </ul>
+              </li>
+              <li><a
+                  href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA==#"
+                  onclick="view_details(&quot;cGRmX3BhdGg9ZWFzZV9vZl9kb2luZ19idXNzaW5lc3NfcGRmLyZwZGZfbmFtZT1VRENQUl9VcGRhdGVkXzMwLjAxLjIzLnBkZg==&quot;) ">UDCPR</a>
+              </li>
+              <li><a
+                  href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWNpcmN1bGFyX2Rhc2hib2FyZA==">Circular</a>
+              </li>
+              <li><a
+                  href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPXBhdGNoX2Rhc2hib2FyZA==">Patch</a>
+              </li>
+            </ul>
+          </li>
+          <!-------End code here------------->
+          <!-- Ruchita 5thAug2020 Bug Id : 41230 -->
+          <style>
+            .dropdown-menu {
+              top: 60px;
+              right: 0px;
+              left: unset;
+              width: 460px;
+              box-shadow: 0px 5px 7px -1px #c1c1c1;
+              padding-bottom: 0px;
+              padding: 0px;
+            }
+
+            .dropdown-menu:before {
+              content: "";
+              position: absolute;
+              top: -20px;
+              right: 12px;
+              border: 10px solid #343A40;
+              border-color: transparent transparent #343A40 transparent;
+            }
+
+            .head {
+              padding: 5px 15px;
+              border-radius: 3px 3px 0px 0px;
+            }
+
+            .footer {
+              padding: 5px 15px;
+              border-radius: 0px 0px 3px 3px;
+            }
+
+            .notification-box {
+              padding: 10px 0px;
+            }
+
+            .bg-gray {
+              background-color: #eee;
+            }
+
+            @media (max-width: 640px) {
+              .dropdown-menu {
+                top: 50px;
+                left: -16px;
+                width: 290px;
+              }
+
+              .nav {
+                display: block;
+              }
+
+              .nav .nav-item,
+              .nav .nav-item a {
+                padding-left: 0px;
+              }
+
+              .message {
+                font-size: 13px;
+              }
+
+              .badge {
+                position: relative;
+                top: -20px;
+                left: -25px;
+                border: 1px solid black;
+                border-radius: 50%;
+              }
+
+            }
+
+            .notificationUnread {
+              color: #d15b47;
+              margin-top: 10px;
+              margin-left: 10px;
+            }
+
+            .badge {
+              position: relative;
+              top: -15px;
+              left: -25px;
+              border: 1px solid black;
+              border-radius: 50%;
+            }
+          </style>
+          <!-- Ruchita 5thAug2020 Bug Id : 41230 -->
+          <!-- Ruchita 5thAug2020 Bug Id : 41230 -->
+          <!-- Ruchita 5thAug2020 Bug Id : 41230 -->
+
+          <li><a href="https://mahavastu.maharashtra.gov.in/index.php?signin=1" target="_self"><i
+                class="fa fa-sign-in"></i> Login</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="logo-cont">
+    <div class="container">
+      <div class="container">
+        <div class="col-md-2 pull-left col-xs-12" align="left" style="padding-top: 80px;">
+          <div class="navbar-header" style="float:none ;">
+            <a href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA==#"
+              target="_self"><img class="" src="./BPMS_files/aaple-sarkar.jpg" width="" height=""></a>
+            <span style="margin-top:20px;"></span>
+            <!-- <span style="vertical-align: bottom ;font-size:14px;"><b>By Urban Development Department</b></span>-->
+            <span style="display:inherit;vertical-align: bottom; font-size:14px;color:#000;"></span>
+          </div>
+        </div>
+        <div class="col-md-8 pull-left col-xs-12">
+          <div class="mid-text header-text" style="text-align: center;padding: 0px 0;">
+            <img class="logo" src="./BPMS_files/MahaVastu.png" width="75px;" height="">
+            <h1>BUILDING PLAN MANAGEMENT SYSTEM</h1>
+            <p>By Urban Development Department</p>
+          </div>
+        </div>
+        <div class="col-md-2 hidden-xs" align="right" style="padding-top:58px ;">
+
+          <img src="./BPMS_files/gom-logo.png" alt="Government of Maharashtra" style="width:60%">
+          <span style="display:inherit; vertical-align: bottom; font-size:14px;color:#000;"></span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <marquee onmouseover="this.stop();" onmouseout="this.start();" hspace="0" vspace="0"
+        style="color: red; font-weight: bold">Important Notice: We are conducing BPMS application training every
+        Wednesday 11am to 12pm. Click on the link:- <span style="cursor: pointer;"
+          onclick="OpenLink(&#39;https://meet.google.com/foi-wtwj-tqr&#39;)">https://shorturl.at/hGZ37</span></marquee>
+      <!-- <marquee onmouseover="this.stop();" onmouseout="this.start();" hspace=0 vspace=0 style="color: red; font-weight: bold">Downtime: We are taking a 40 minute downtime today between 1:00pm to 2:00pm for server reboot. We will revert the same after completion.</marquee> -->
+    </div>
+  </div>
+  <script>
+    function OpenLink(sPath) {
+      var sFeature = "resizable=yes,scrollbars=yes,top=10,left=10,height=650,width=1100"
+      window.open(sPath, 'AutoDcr', sFeature)
+    }
+  </script>
+
+  <!--    <tr valign="bottom"><td>
+                            <table cellpadding="0" cellspacing="0" style="width:100%; vertical-align:top;">-->
+
+
+  <!--            <tr valign="top"><td height="360px" style="width:100%; background-color:#fbf3dc;">-->
+
+  <!--              <table width="100%" cellpadding="0" cellspacing="0" style="padding:5px">-->
+
+  <!--Form-start-here-->
+  <!--                <tr valign="top"> -->
+
+
+  <!--Form-closed-here-->
+
+  <!--  Text-start Here-->
+
+
+  <style>
+    .form-control {
+      display: block;
+      width: 100%;
+      height: 34px;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #555;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+
+  <div class="container" style="background:#FFF;">
+    <form name="frm" id="myform"
+      action="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA=="
+      method="post" enctype="multipart/form-data">
+      <div class="space"></div>
+      <div class="">
+        <div class="panel-heading heading-style  " role="tab" id="">
+          <h4 class="panel-title">
+            Proposal Status for Full Occupancy
+          </h4>
+        </div>
+
+        <div class="col-sm-12"
+          style="padding: 5px;box-sizing: border-box;border:1px solid #DDDDDD;border-bottom-right-radius: 6px 2px;border-bottom-left-radius:  3px 4px;">
+          <div id="collapseOne12" class="panel-collapse  collapse in" role="tabpanel" aria-labelledby="headingOne11">
+            <div class="panel-body">
+
+              <div class="form-inline col-sm-12 ">
+                <div class="panel-body">
+                  <div class="form-inline col-sm-6 ">
+                    <div class="col-sm-5 col-xs-5"><label>Proposal No </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> 131448</span></div>
+                  </div>
+                  <div class="form-inline col-sm-6 ">
+                    <div class="col-sm-5 col-xs-5"><label>Application No </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> CVNYM/2022/131448/23018</span></div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-inline col-sm-6 ">
+                    <div class="col-sm-5 col-xs-5"><label>Owner Name </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> DINESH CHANGDEV DHATRAK</span></div>
+                  </div>
+                  <div class="form-inline col-sm-6 ">
+                    <div class="col-sm-5 col-xs-5"><label>Additional Owner List </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> <button type="button" class="btn btn-info btn-sm"
+                          data-toggle="modal" id="additional_owner_list" data-target="#myModal1">View</button></span>
+                    </div>
+                    <div class="modal fade" id="myModal1" role="dialog" aria-labelledby="myModalLabel"
+                      style="display: none;">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Additional Owner List</h4>
+                          </div>
+                          <div class="modal-body">
+                            <table id="classTable" class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th width="10%">Sr No</th>
+                                  <th width="20%">Name</th>
+                                  <th width="40%">Address</th>
+                                  <th width="15%">Mobile No</th>
+                                  <th width="15%">Email</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr align="center">
+                                  <td colspan="5">No result Found</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Proposal Date </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> 25/08/2021</span></div>
+                  </div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Proposal Code </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> CBNYM-22-ENTRY-56762</span></div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"><label>Proposal Type </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> RESIDENTIAL</span></div>
+                  </div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Proposal Plot Area </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> 123.75</span></div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>TDR Zone </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> </span></div>
+                  </div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Site Area </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> 7.4-मौजे आंगणगांव मधील - नाशिक रस्त्यावरील रहिवास
+                        विभाग</span></div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Certificate Number </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> CVNYM/FO/2022/APL/00172</span></div>
+                  </div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Approve Date </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> 12/12/2022</span></div>
+                  </div>
+                  <div class="clearfix"></div>
+
+                  <!-- Ruchita 30thSep2020 Bug Id : 42335 -->
+                  <!-- Ruchita 30thSep2020 Bug Id : 42335 -->
+
+                  <!-- Ruchita17thOct2022 -->
+                  <!-- Ruchita17thOct2022 -->
+                </div>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="panel-heading" style="background:#bab8b8; color:#383535" role="tab">
+                <h4 class="panel-title">Site Details</h4>
+              </div>
+
+
+              <div class="form-inline col-sm-12 ">
+
+                <div class="panel-body">
+                  <div class="form-inline col-sm-6 ">
+                    <div class="col-sm-5 col-xs-5"><label>Site Address</label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> SURVEY NO.14/A/3A/14/A/3B,PLOT NO.53(P)+54,NEAR MAULI
+                        LAWNS,VINCHUR ROAD,YEOLA</span></div>
+                  </div>
+
+                  <div class="form-inline col-sm-6 ">
+                    <div class="col-sm-5 col-xs-5"><label>Site Location</label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> Municipal Council B</span></div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Survey Number</label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> </span></div>
+                  </div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Plot Number</label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> 53(P)+54</span></div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"><label>Premium FSI </label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> </span></div>
+                  </div>
+                  <div class="form-inline col-sm-6">
+                    <div class="col-sm-5 col-xs-5"> <label>Plot Area</label></div>
+                    <div class="col-sm-1 col-xs-1">:</div>
+                    <div class="col-sm-6 col-xs-6"> <span> 123.75</span></div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Trupti 2ndDec2022 -->
+            <div class="panel panel-default table-responsive">
+              <div class="panel-heading heading-style" role="tab" id="headingTwo99">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion22"
+                    href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA==#collapseTwo99"
+                    aria-expanded="false" aria-controls="collapseTwo99">
+                    <i class="more-less glyphicon glyphicon-plus"></i>
+                    Building and Floor Details
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo99" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo99">
+                <div class="panel-body">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-12">
+                    <div class="panel-body">
+                      <div class="form-inline col-sm-6 ">
+                        <div class="col-sm-6 col-xs-6"><label for="email">Building Name :</label></div>
+                        <div class="col-sm-6 col-xs-6"> <span>SALMUTHE RESIDENCE</span></div>
+                      </div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6"> <label for="email">Building Category :</label></div>
+                        <div class="col-sm-6 col-xs-6"><span>Residential</span></div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="form-inline col-sm-6 ">
+                        <div class="col-sm-6 col-xs-6"><label for="email">Sub Category :</label></div>
+                        <div class="col-sm-6 col-xs-6"> <span>Independent single family</span></div>
+                      </div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6"> <label for="email">Total Built Up Area :</label></div>
+                        <div class="col-sm-6 col-xs-6"><span>198.95 Sq. mt.</span></div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="form-inline col-sm-6 ">
+                        <div class="col-sm-6 col-xs-6"><label for="email">No.of Tenements :</label></div>
+                        <div class="col-sm-6 col-xs-6"> <span>0</span></div>
+                      </div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6"> <label for="email">No. of Levels :</label></div>
+                        <div class="col-sm-6 col-xs-6"><span>2</span></div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="form-inline col-sm-6 ">
+                        <div class="col-sm-6 col-xs-6"><label for="email">No. of Buildings :</label></div>
+                        <div class="col-sm-6 col-xs-6"> <span>1</span></div>
+                      </div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6"> <label for="email">Basement Height(m) :</label></div>
+                        <div class="col-sm-6 col-xs-6"><span>0.75</span></div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6"> <label for="email">Plinth Level(m) :</label></div>
+                        <div class="col-sm-6 col-xs-6"><span>0.75</span></div>
+                      </div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6"> <label for="email">Residential Built Up Area :</label></div>
+                        <div class="col-sm-6 col-xs-6"><span>198.95 Sq. mt.</span></div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6"> <label for="email">Commercial Built Up Area :</label></div>
+                        <div class="col-sm-6 col-xs-6"><span>0.00 Sq. mt.</span></div>
+                      </div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6"> <label for="email">Industrial Built Up Area :</label></div>
+                        <div class="col-sm-6 col-xs-6"><span>0.00 Sq. mt.</span></div>
+                      </div>
+                      <div class="clearfix">&nbsp;</div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6">
+                          <label for="email">Educational Buildup Area :</label>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                          <span>0.00</span>
+                        </div>
+                      </div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6">
+                          <label for="email">Institutional Buildup Area :</label>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                          <span>0.00</span>
+                        </div>
+                      </div>
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6">
+                          <label for="email">Building Height :</label>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                          <span>0.00</span>
+                        </div>
+                      </div>
+
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6">
+                          <label for="email">Plinth Intimation Taken :</label>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                          <span>Yes</span>
+                        </div>
+                      </div>
+
+                      <div class="clearfix">&nbsp;</div>
+
+                      <div class="form-inline col-sm-6">
+                        <div class="col-sm-6 col-xs-6">
+                          <label for="email">Part Occupancy Taken :</label>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                          <span>No</span>
+                        </div>
+                      </div>
+
+                      <div class="form-inline col-sm-12">
+                        <div class="panel-heading heading-style" role="tab"
+                          style="border-bottom: 1px solid #fff;text-align: center;" id="build_detail167513">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion222"
+                              href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA==#collapsebuild_detail167513"
+                              aria-expanded="false" aria-controls="collapsebuild_detail167513">
+                              <i class="more-less glyphicon glyphicon-plus"></i>
+                              Floor Details
+                            </a>
+                          </h4>
+                        </div>
+                      </div>
+                      <div class="clearfix">&nbsp;</div>
+                      <!-- Ruchita 4thNov2020 Bug Id : 43198 -->
+
+                      <div id="collapsebuild_detail167513" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="build_detail167513">
+                        <div class="panel-body">
+                          <div class="col-sm-12">
+                            <div class="panel-body">
+                              <div class="table-responsive">
+                                <div id="myTable1_wrapper"
+                                  class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <div class="dataTables_length" id="myTable1_length"><label>Show <select
+                                            name="myTable1_length" aria-controls="myTable1"
+                                            class="form-control input-sm">
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                          </select> entries</label></div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <div id="myTable1_filter" class="dataTables_filter"><label>Search:<input
+                                            type="search" class="form-control input-sm" placeholder=""
+                                            aria-controls="myTable1"></label></div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-sm-12">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                        class="table table-striped table-bordered table-hover dataTable no-footer"
+                                        id="myTable1" role="grid" aria-describedby="myTable1_info" style="width: 100%;">
+                                        <thead>
+                                          <tr role="row">
+                                            <td class="sorting_asc" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-sort="ascending"
+                                              aria-label="Floor Name: activate to sort column descending"
+                                              style="width: 0px;"><b>Floor Name</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1"
+                                              aria-label="Floor Height(m): activate to sort column ascending"
+                                              style="width: 0px;"><b>Floor Height(m)</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Bottom Level: activate to sort column ascending"
+                                              style="width: 0px;"><b>Bottom Level</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Top Level: activate to sort column ascending"
+                                              style="width: 0px;"><b>Top Level</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Floor Area: activate to sort column ascending"
+                                              style="width: 0px;"><b>Floor Area</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Floor use: activate to sort column ascending"
+                                              style="width: 0px;"><b>Floor use</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Parking Floor: activate to sort column ascending"
+                                              style="width: 0px;"><b>Parking Floor</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Ground Floor: activate to sort column ascending"
+                                              style="width: 0px;"><b>Ground Floor</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Stilt Floor: activate to sort column ascending"
+                                              style="width: 0px;"><b>Stilt Floor</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1"
+                                              aria-label="Ex - Floor Area: activate to sort column ascending"
+                                              style="width: 0px;"><b>Ex - Floor Area</b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1"
+                                              aria-label=" Floor Used Area : activate to sort column ascending"
+                                              style="width: 0px;"><b> Floor Used Area </b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Floor Usage : activate to sort column ascending"
+                                              style="width: 0px;"><b>Floor Usage </b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1"
+                                              aria-label="Part OC Taken Or Not : activate to sort column ascending"
+                                              style="width: 0px;"><b>Part OC Taken Or Not </b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1" aria-label="Typical Floor : activate to sort column ascending"
+                                              style="width: 0px;"><b>Typical Floor </b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1"
+                                              aria-label="Part Oc Applied Yes /No : activate to sort column ascending"
+                                              style="width: 0px;"><b>Part Oc Applied Yes /No </b></td>
+                                            <td class="sorting" tabindex="0" aria-controls="myTable1" rowspan="1"
+                                              colspan="1"
+                                              aria-label="Part Oc Applied Area : activate to sort column ascending"
+                                              style="width: 0px;"><b>Part Oc Applied Area </b></td>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="odd">
+                                            <td valign="top" colspan="16" class="dataTables_empty">No data available in
+                                              table</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-sm-5">
+                                      <div class="dataTables_info" id="myTable1_info" role="status" aria-live="polite">
+                                        Showing 0 to 0 of 0 entries</div>
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="dataTables_paginate paging_simple_numbers" id="myTable1_paginate">
+                                        <ul class="pagination">
+                                          <li class="paginate_button previous disabled" id="myTable1_previous"><a
+                                              href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA==#"
+                                              aria-controls="myTable1" data-dt-idx="0" tabindex="0">Previous</a></li>
+                                          <li class="paginate_button next disabled" id="myTable1_next"><a
+                                              href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA==#"
+                                              aria-controls="myTable1" data-dt-idx="1" tabindex="0">Next</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>&nbsp;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="panel-body">
+              <div class="panel-heading" style="background:#bab8b8; color:#383535" role="tab">
+                <h4 class="panel-title">Proposal Timeline Details</h4>
+              </div>
+              <div class="form-inline col-sm-12 ">&nbsp;</div>
+              <div class="form-inline col-sm-3">
+                <table border="1" cellpadding="1" cellspacing="1" width="30%" class="table table-bordered ">
+                  <tbody>
+                    <tr>
+                      <td><span class="glyphicon glyphicon-ok" style="color:gray;font-size:23px;"></span></td>
+                      <td>Done</td>
+                    </tr>
+                    <tr>
+                      <td><span class="glyphicon glyphicon-warning-sign" style="color:gray;font-size:23px;"></span></td>
+                      <td>Pending</td>
+                    </tr>
+                    <tr>
+                      <td><span class="glyphicon glyphicon-remove-sign" style="color:gray;font-size:23px;"></span></td>
+                      <td>Reject</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="form-inline col-sm-3 ">
+                <table border="1" cellpadding="1" cellspacing="1" width="30%" class="table table-bordered ">
+                  <tbody>
+                    <tr>
+                      <td style="background-color: #99e6ff;"></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td style="background-color: #ffcccc;"></td>
+                      <td>Pending</td>
+                    </tr>
+                    <tr>
+                      <td style="background-color: #adebad;"></td>
+                      <td>Approved</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="panel-body">
+                <div class="col-sm-12">
+
+                  <div class="form-group table-responsive col-md-12 col-sm-12 col-xs-12">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                      class="table table-striped table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <td align="left" width="30%"><b>Service Name</b>&nbsp;:&nbsp; Full Occupancy</td>
+                        </tr>
+                      </thead>
+                    </table>
+                    <table border="1" cellpadding="1" cellspacing="1" width="100%" class="table ">
+                      <thead></thead>
+                      <thead>
+                        <tr>
+                          <td align="center" width="5%">Steps No.</td>
+                          <td align="center" width="15%"> Authority / Applicant</td>
+                          <td align="center" width="10%">Designation</td>
+                          <td align="center" width="10%">Application Received Date</td>
+                          <td align="center" width="10%">Application Forward/Approve Date</td>
+                          <td align="center" width="10%">Duration(In Days)</td>
+                          <td align="center" width="10%">Expected Completion Days</td>
+                          <td align="center" width="10%">Delay(In Days)</td>
+                          <td align="center" width="10%">Project Verified By Technical</td>
+                          <td align="center" width="10%">Pre Approval Payment</td>
+                          <td align="center" width="10%">Document Verification</td>
+                          <td align="center" width="10%">Site Inspection</td>
+                          <td align="center" width="10%">Post Approval Payment Verification</td>
+                          <td align="center" width="10%">Post Approval Payment</td>
+                          <td align="center" width="10%">Architect Digital Signature Status</td>
+                          <td align="center" width="10%">Certificate Issued</td>
+                          <td align="center" width="10%">Status / Action</td>
+                          <td align="center" width="20%">Remark</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="background-color:#99e6ff;">
+                          <td align="center" width="5%">1</td>
+                          <td align="left" width="15%"></td>
+                          <td align="center" width="10%"></td>
+                          <td align="center" width="20%">07/12/2022</td>
+                          <td align="center" width="10%">07/12/2022</td>
+                          <td align="center" width="10%">1</td>
+                          <td align="center" width="10%">6</td>
+                          <td align="center" width="10%">0</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">Forwarded</td>
+                          <td align="center" width="20%"></td>
+                        </tr>
+                        <tr style="background-color:;">
+                          <td align="center" width="5%">2</td>
+                          <td align="left" width="15%">Kaustubh Bhave</td>
+                          <td align="center" width="10%">Assistant Town Planner</td>
+                          <td align="center" width="20%">-</td>
+                          <td align="center" width="10%">12/12/2022</td>
+                          <td align="center" width="10%">1</td>
+                          <td align="center" width="10%">0</td>
+                          <td align="center" width="10%">0</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%"><span class="glyphicon glyphicon-ok"
+                              style="color:gray;font-size:23px;"></span></td>
+                          <td align="center" width="10%"><span class="glyphicon glyphicon-ok"
+                              style="color:gray;font-size:23px;"></span></td>
+                          <td align="center" width="10%"><span class="glyphicon glyphicon-ok"
+                              style="color:gray;font-size:23px;"></span></td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">Forwarded</td>
+                          <td align="center" width="20%"></td>
+                        </tr>
+                        <tr style="background-color:#adebad;">
+                          <td align="center" width="5%">3</td>
+                          <td align="left" width="15%">Kiran Deshmukh</td>
+                          <td align="center" width="10%">Chief Officer</td>
+                          <td align="center" width="20%">-</td>
+                          <td align="center" width="10%">12/12/2022</td>
+                          <td align="center" width="10%">1</td>
+                          <td align="center" width="10%">0</td>
+                          <td align="center" width="10%">0</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%"><span class="glyphicon glyphicon-ok"
+                              style="color:gray;font-size:23px;"></span></td>
+                          <td align="center" width="10%"><span class="glyphicon glyphicon-ok"
+                              style="color:gray;font-size:23px;"></span></td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">Approved</td>
+                          <td align="center" width="20%"></td>
+                        </tr>
+                        <tr>
+                          <td align="center" width="5%">4</td>
+                          <td align="left" width="15%">Amol patil</td>
+                          <td align="center" width="10%">Planning Assistant</td>
+                          <td align="center" width="20%">12/12/2022</td>
+                          <td align="center" width="10%">-</td>
+                          <td align="center" width="10%">1</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%"><span class="glyphicon glyphicon-ok"
+                              style="color:gray;font-size:23px;"></span></td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">Forwarded</td>
+                          <td align="center" width="20%">NA</td>
+                        </tr>
+                        <tr style="background-color:#99e6ff;">
+                          <td align="center" width="5%">5</td>
+                          <td align="left" width="15%"></td>
+                          <td align="center" width="10%"></td>
+                          <td align="center" width="20%">12/12/2022</td>
+                          <td align="center" width="10%">12/12/2022</td>
+                          <td align="center" width="10%">2</td>
+                          <td align="center" width="10%">6</td>
+                          <td align="center" width="10%">0</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%"><span class="glyphicon glyphicon-ok"
+                              style="color:gray;font-size:23px;"></span></td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">Forwarded</td>
+                          <td align="center" width="20%">payment Approved by First Authority</td>
+                        </tr>
+                        <tr style="background-color:#adebad;">
+                          <td align="center" width="5%">6</td>
+                          <td align="left" width="15%">Kiran Deshmukh</td>
+                          <td align="center" width="10%">Chief Officer</td>
+                          <td align="center" width="20%">12/12/2022</td>
+                          <td align="center" width="10%">13/12/2022</td>
+                          <td align="center" width="10%">1</td>
+                          <td align="center" width="10%">0</td>
+                          <td align="center" width="10%">0</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%">NA</td>
+                          <td align="center" width="10%"><span class="glyphicon glyphicon-ok"
+                              style="color:gray;font-size:23px;"></span></td>
+                          <td align="center" width="10%">Approved</td>
+                          <td align="center" width="20%"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="form-group table-responsive col-md-12 col-sm-12 col-xs-12">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                      class="table table-striped table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <td align="left" width="30%"><b>Full Occupancy Insepction Report Detail</b></td>
+                        </tr>
+                      </thead>
+                    </table>
+                    <table border="1" cellpadding="1" cellspacing="1" width="100%" class="table table-bordered ">
+                      <thead>
+                        <tr>
+                          <td align="center" width="5%" class=""><b>Sr No.</b></td>
+                          <td align="center" width="15%" class=""><b>Authority</b></td>
+                          <td align="center" width="20%" class=""><b>Designation</b></td>
+                          <td align="center" width="10%" class=""><b>Site Visited Date</b></td>
+                          <td align="center" width="20%" class=""><b>Visit Start Time</b></td>
+                          <td align="center" width="20%" class=""><b>Visit End Time</b></td>
+                          <td align="center" width="10%" class=""><b>Site Inspection Report </b></td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="background-color:#adebad;">
+                          <td align="center" width="5%">1</td>
+                          <td align="left" width="15%">Kaustubh Bhave</td>
+                          <td align="center" width="10%">Assistant Town Planner</td>
+                          <td align="center" width="20%">12/12/2022</td>
+                          <td align="center" width="10%">01:00 PM</td>
+                          <td align="center" width="10%">02:00 pm</td>
+                          <td align="center" width="10%"><a
+                              href="https://mahavastu.maharashtra.gov.in/pdfgenerator/sitevisit_report_new.php?mod_id=6&amp;loc_id=203&amp;propid=131433&amp;inwdid=218205&amp;appid=23018"
+                              target="_blank" class="btn btn-info btn-sm">View pdf</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="form-inline col-sm-12 ">
+                <div class="col-sm-12 col-xs-12" style="text-align:center;">
+                  <!-- <div  class="btn btn-success"> -->
+                  <!-- <a style="color:white;" href="index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWNpdGl6ZW5fc2VhcmNoX3N0YXR1cyZwYWdlPTA="> Back </a> -->
+                  <button class="btn btn-success" onclick="javascript:window.close()">Close</button>
+                  <!-- </div> -->
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space"></div>
+    </form>
+  </div>
+
+
+
+  <!--  </td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="18" class="conBgint">&nbsp;</td>
+              </tr>
+          -->
+
+  <!-- <div style="background:#666; color:#FFF; text-align:center">    EDCR Â© 2015 Privacy Policy All rights reserved.</div> -->
+
+
+
+  <div class="footer">
+    <footer class="gray-body-cont">
+      <div class="container">
+        <div class="space"></div>
+        <div class="row">
+
+          <div class="col-lg-4" align="left">
+            <div class="widget">
+              <h5 style=" color:#fff; margin-bottom:10px;">Quick Links :</h5>
+              <ul class="link-list">
+
+                <li><a href="https://mahavastu.maharashtra.gov.in/index.php"> Home</a></li>
+                <li><a
+                    href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPXN0YXRlX2xldmVsX2Rhc2hib2FyZA==">
+                    Dashboard</a></li>
+                <li><a
+                    href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPXVzZXJndWlkZQ==">
+                    User Guide</a></li>
+                <li><a href="https://mahavastu.maharashtra.gov.in/index.php?signin=1"> Login</a></li>
+                <!-- Ruchita 21stNov2020 Bug Id : 43533 -->
+                <li><a
+                    href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPWN1c3RvbWVyX2ZlZWRiYWNr">
+                    Customer Feedback </a></li>
+                <!-- Ruchita 21stNov2020 Bug Id : 43533 -->
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="widget">
+              Powered by:<br> Maharashtra IT Corporation Ltd.
+              <div class="clearfix"></div>
+              <img src="./BPMS_files/Maharashtra IT Crporation-logo.jpg" width="130px">
+            </div>
+          </div>
+
+          <div class="col-lg-4" align="right">
+            <div class="widget">
+              <h5 style="font-weight:bold; color:#FFF; margin-bottom:10px;"></h5>
+              <ul class="link-list">
+                <li><br></li>
+                <!-- <li><a>  Contact Us : pmu.mahait@maharashtra.gov.in</a></li> -->
+                <li><a> Contact Us : support.mahavastu@mahait.org</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </footer>
+
+
+    <div class="clearfix"></div>
+
+    <div style="background:#31323a; color:#B7B9DA;text-align:center">© 2024 Privacy Policy All rights reserved.</div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="clearfix"></div>
+  <div class="space"></div>
+  <div class="footer">
+  </div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;">Top</button>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./BPMS_files/bootstrap.js.download"></script>
+  <link href="./BPMS_files/jquery-ui.css" rel="stylesheet">
+  <script src="./BPMS_files/jquery-ui.js.download"></script>
+
+  <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById('all-service');
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+        $("#view-services-btn").prop('value', 'View Less');
+      } else {
+        x.style.display = 'none';
+        $("#view-services-btn").prop('value', 'View More');
+      }
+    };
+  </script>
+  <!---------Added files for export datatable button by gajanan , Date:20-12-17 ------>
+  <link rel="stylesheet" href="./BPMS_files/buttons.dataTables.min.css">
+
+  <script type="text/javascript" language="javascript" src="./BPMS_files/dataTables.buttons.min.js.download"></script>
+  <script type="text/javascript" language="javascript" src="./BPMS_files/buttons.flash.min.js.download"></script>
+  <script type="text/javascript" language="javascript" src="./BPMS_files/buttons.html5.min.js.download"></script>
+  <script type="text/javascript" language="javascript" src="./BPMS_files/buttons.print.min.js.download"></script>
+
+  <script type="text/javascript" language="javascript" src="./BPMS_files/pdfmake.min.js.download"></script>
+
+  <script type="text/javascript" language="javascript" src="./BPMS_files/vfs_fonts.js.download"></script>
+
+
+
+  <script>
+    $(document).ready(function () {
+      $('#myTable').DataTable();
+      $('#myTable1').DataTable();
+      $('#myTable2').DataTable();
+      $('#myTable3').DataTable();
+      $('#myTable4').DataTable();
+      $('#myTable5').DataTable();
+      $('#myTable6').DataTable();
+      $('#myTable7').DataTable();
+      $('#myTable8').DataTable();
+      $('#myTable9').DataTable();
+      /*
+           $('#myTable').DataTable( {
+            dom: 'Bfrtip',
+          paging: true,
+          autoWidth: true,
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL'
+             
+                }
+            ]
+        } );*/
+
+
+      $('#sitevisit').DataTable({
+        "paging": true,
+        "ordering": false,
+        "info": true,
+        "bFilter": true,
+        responsive: true
+
+
+      });
+
+
+      $('#remark').DataTable({
+        "paging": false,
+        "ordering": false,
+        "info": false,
+        "bFilter": false,
+        responsive: true
+      });
+
+    });
+    $(function () {
+
+      $("#txt_date").datepicker({
+        dateFormat: 'dd/mm/yy'
+      });
+
+      //$(".past_date").datepicker({changeYear:true, minDate: new Date(, 12, 1), dateFormat: 'dd/mm/yy', maxDate: new Date(, , ) });
+
+      /*$(".past_date").datepicker({changeYear:true, minDate: "", dateFormat: 'dd/mm/yy', maxDate: "" });  
+
+
+      $("#cutoff_year").datepicker({minDate: "01/08/2017", dateFormat: 'dd/mm/yy', maxDate: '+28D' });*/
+
+      //Setting date licnence and min date value for meddting date
+      //$("#txtlenddt").attr("readonly","true");
+      $('#txtlenddt').datepicker({
+        minDate: +1,
+        dateFormat: 'dd/mm/yy',
+        changeYear: true,
+        yearRange: 'c-20:c+3',
+        changeMonth: true,
+      });
+      //Setting date formate and min date value for meddting date
+
+      //$("#txtdocverdt").attr("readonly","true");
+      $("#txtdocverdt").datepicker({
+        minDate: 0,
+        dateFormat: 'd/m/yy'
+      });
+
+      //Setting datepicker for site visiting details for site visit remark
+
+      //  $("#txtsdate").attr("readonly","true");     
+      $("#txtsdate").datepicker({
+        minDate: 0,
+        maxDate: 0,
+        dateFormat: 'd/m/yy'
+      });
+
+
+
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $(".newspan").bootstrapNews({
+        newsPerPage: 5,
+        navigation: true,
+        autoplay: true,
+        direction: 'up', // up or down
+        animationSpeed: 'normal',
+        newsTickerInterval: 4000, //4 secs
+        pauseOnHover: true,
+        onStop: null,
+        onPause: null,
+        onReset: null,
+        onPrev: null,
+        onNext: null,
+        onToDo: null
+      });
+    });
+  </script>
+
+  <!-- inline scripts related to this page -->
+  <script type="text/javascript">
+    jQuery(function ($) {
+      $('.easy-pie-chart.percentage').each(function () {
+        var $box = $(this).closest('.infobox');
+        var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+        var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+        var size = parseInt($(this).data('size')) || 50;
+        $(this).easyPieChart({
+          barColor: barColor,
+          trackColor: trackColor,
+          scaleColor: false,
+          lineCap: 'butt',
+          lineWidth: parseInt(size / 10),
+          animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+          size: size
+        });
+      })
+
+      $('.sparkline').each(function () {
+        var $box = $(this).closest('.infobox');
+        var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+        $(this).sparkline('html', {
+          tagValuesAttribute: 'data-values',
+          type: 'bar',
+          barColor: barColor,
+          chartRangeMin: $(this).data('min') || 0
+        });
+      });
+
+
+      //flot chart resize plugin, somehow manipulates default browser resize event to optimize it!
+      //but sometimes it brings up errors with normal resize event handlers
+      $.resize.throttleWindow = false;
+
+      var placeholder = $('#piechart-placeholder').css({
+        'width': '90%',
+        'min-height': '150px'
+      });
+      var data = [{
+        label: "Approved",
+        data: 38.7,
+        color: "#68BC31"
+      },
+      {
+        label: "In Process",
+        data: 24.5,
+        color: "#2091CF"
+      },
+      {
+        label: "Rejected",
+        data: 8.2,
+        color: "#AF4E96"
+      },
+      {
+        label: "Pending",
+        data: 18.6,
+        color: "#DA5430"
+      },
+      {
+        label: "Re-Assign",
+        data: 10,
+        color: "#FEE074"
+      }
+      ]
+
+      function drawPieChart(placeholder, data, position) {
+        $.plot(placeholder, data, {
+          series: {
+            pie: {
+              show: true,
+              tilt: 0.8,
+              highlight: {
+                opacity: 0.25
+              },
+              stroke: {
+                color: '#fff',
+                width: 2
+              },
+              startAngle: 2
+            }
+          },
+          legend: {
+            show: true,
+            position: position || "ne",
+            labelBoxBorderColor: null,
+            margin: [-30, 15]
+          },
+          grid: {
+            hoverable: true,
+            clickable: true
+          }
+        })
+      }
+      drawPieChart(placeholder, data);
+
+      /**
+      we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+      so that's not needed actually.
+      */
+      placeholder.data('chart', data);
+      placeholder.data('draw', drawPieChart);
+
+
+      //pie chart tooltip example
+      var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+      var previousPoint = null;
+
+      placeholder.on('plothover', function (event, pos, item) {
+        if (item) {
+          if (previousPoint != item.seriesIndex) {
+            previousPoint = item.seriesIndex;
+            var tip = item.series['label'] + " : " + item.series['percent'] + '%';
+            $tooltip.show().children(0).text(tip);
+          }
+          $tooltip.css({
+            top: pos.pageY + 10,
+            left: pos.pageX + 10
+          });
+        } else {
+          $tooltip.hide();
+          previousPoint = null;
+        }
+
+      });
+
+      /////////////////////////////////////
+      $(document).one('ajaxloadstart.page', function (e) {
+        $tooltip.remove();
+      });
+
+
+
+
+      var d1 = [];
+      for (var i = 0; i < Math.PI * 2; i += 0.5) {
+        d1.push([i, Math.sin(i)]);
+      }
+
+      var d2 = [];
+      for (var i = 0; i < Math.PI * 2; i += 0.5) {
+        d2.push([i, Math.cos(i)]);
+      }
+
+      var d3 = [];
+      for (var i = 0; i < Math.PI * 2; i += 0.2) {
+        d3.push([i, Math.tan(i)]);
+      }
+
+
+      var sales_charts = $('#sales-charts').css({
+        'width': '100%',
+        'height': '220px'
+      });
+      $.plot("#sales-charts", [{
+        label: "Domains",
+        data: d1
+      },
+      {
+        label: "Hosting",
+        data: d2
+      },
+      {
+        label: "Services",
+        data: d3
+      }
+      ], {
+        hoverable: true,
+        shadowSize: 0,
+        series: {
+          lines: {
+            show: true
+          },
+          points: {
+            show: true
+          }
+        },
+        xaxis: {
+          tickLength: 0
+        },
+        yaxis: {
+          ticks: 10,
+          min: -2,
+          max: 2,
+          tickDecimals: 3
+        },
+        grid: {
+          backgroundColor: {
+            colors: ["#fff", "#fff"]
+          },
+          borderWidth: 1,
+          borderColor: '#555'
+        }
+      });
+
+
+      $('#recent-box [data-rel="tooltip"]').tooltip({
+        placement: tooltip_placement
+      });
+
+      function tooltip_placement(context, source) {
+        var $source = $(source);
+        var $parent = $source.closest('.tab-content')
+        var off1 = $parent.offset();
+        var w1 = $parent.width();
+
+        var off2 = $source.offset();
+        //var w2 = $source.width();
+
+        if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2)) return 'right';
+        return 'left';
+      }
+
+
+      $('.dialogs,.comments').ace_scroll({
+        size: 300
+      });
+
+
+      //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+      //so disable dragging when clicking on label
+      var agent = navigator.userAgent.toLowerCase();
+      if ("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+        $('#tasks').on('touchstart', function (e) {
+          var li = $(e.target).closest('#tasks li');
+          if (li.length == 0) return;
+          var label = li.find('label.inline').get(0);
+          if (label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation();
+        });
+
+      $('#tasks').sortable({
+        opacity: 0.8,
+        revert: true,
+        forceHelperSize: true,
+        placeholder: 'draggable-placeholder',
+        forcePlaceholderSize: true,
+        tolerance: 'pointer',
+        stop: function (event, ui) {
+          //just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+          $(ui.item).css('z-index', 'auto');
+        }
+      });
+      $('#tasks').disableSelection();
+      $('#tasks input:checkbox').removeAttr('checked').on('click', function () {
+        if (this.checked) $(this).closest('li').addClass('selected');
+        else $(this).closest('li').removeClass('selected');
+      });
+
+
+      //show the dropdowns on top or bottom depending on window height and menu position
+      $('#task-tab .dropdown-hover').on('mouseenter', function (e) {
+        var offset = $(this).offset();
+
+        var $w = $(window)
+        if (offset.top > $w.scrollTop() + $w.innerHeight() - 100)
+          $(this).addClass('dropup');
+        else $(this).removeClass('dropup');
+      });
+
+    })
+  </script>
+
+
+  <!-- Carousel Start -->
+  <script>
+    $('#myCarousel').carousel({
+      interval: 4000
+    });
+  </script>
+  <!-- Login -->
+  <script>
+    $(function () {
+      $('.button-checkbox').each(function () {
+        var $widget = $(this),
+          $button = $widget.find('button'),
+          $checkbox = $widget.find('input:checkbox'),
+          color = $button.data('color'),
+          settings = {
+            on: {
+              icon: 'glyphicon glyphicon-check'
+            },
+            off: {
+              icon: 'glyphicon glyphicon-unchecked'
+            }
+          };
+
+        $button.on('click', function () {
+          $checkbox.prop('checked', !$checkbox.is(':checked'));
+          $checkbox.triggerHandler('change');
+          updateDisplay();
+        });
+
+        $checkbox.on('change', function () {
+          updateDisplay();
+        });
+
+        function updateDisplay() {
+          var isChecked = $checkbox.is(':checked');
+          // Set the button's state
+          $button.data('state', (isChecked) ? "on" : "off");
+
+          // Set the button's icon
+          $button.find('.state-icon')
+            .removeClass()
+            .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+          // Update the button's color
+          if (isChecked) {
+            $button
+              .removeClass('btn-default')
+              .addClass('btn-' + color + ' active');
+          } else {
+            $button
+              .removeClass('btn-' + color + ' active')
+              .addClass('btn-default');
+          }
+        }
+
+        function init() {
+          updateDisplay();
+          // Inject the icon if applicable
+          if ($button.find('.state-icon').length == 0) {
+            $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+          }
+        }
+        init();
+      });
+    });
+  </script>
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      $('html,body').animate({
+        scrollTop: 0
+      }, 'slow');
+
+    }
+  </script>
+  <!--<script src="js/jquery.min.js"></script> 
+    <script src="js/lightbox.js"></script>  Commented by rohit 21-03-2017-->
+
+
+
+  <script type="text/javascript">
+    document.addEventListener('contextmenu', event => event.preventDefault()); // disable right click
+    $('a').click(function (e) { // diable ctrl + click to open new tab in brower
+      if (e.ctrlKey) {
+        return false;
+      }
+    });  
+  </script>
+  <div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div>
+  <div id="lightbox" class="lightbox" style="display: none;">
+    <div class="lb-outerContainer">
+      <div class="lb-container"><img class="lb-image"
+          src="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA==">
+        <div class="lb-nav"><a class="lb-prev"
+            href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA=="></a><a
+            class="lb-next"
+            href="https://mahavastu.maharashtra.gov.in/index.php?para=bW9kdWxlPWdlbmVyYWwmYWN0aW9uPUNpdGl6ZW5fb3ZlcmFsbF9zdGF0dXMmcHJvcGlkPTEzMTQzMyZsb2NfaWQ9MjAzJnBtb2RlPTYmZnVsbF92aWV3PSZhcHBpZD0yMzAxOA=="></a>
+        </div>
+        <div class="lb-loader"><a class="lb-cancel"></a></div>
+      </div>
+    </div>
+    <div class="lb-dataContainer">
+      <div class="lb-data">
+        <div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div>
+        <div class="lb-closeContainer"><a class="lb-close"></a></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
